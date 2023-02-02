@@ -11,8 +11,12 @@ function showCountries(){
             //Using forEach() methor to grab the coutries Array
             countries.forEach(country => {
                 const countryDetail = document.createElement("div")
+                const countryImages = document.createElement("img")
                 countryDetail.innerHTML = country.name 
+                countryImages.src = country.flag
+                countryDetail.appendChild(countryImages)
                 document.getElementById('feed').appendChild(countryDetail) 
+                
             })
         }
     }
